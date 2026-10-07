@@ -156,3 +156,68 @@ a {
   font-size: 16px;
   max-width: 640px;
 }
+
+#servicios h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.service-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+.process-steps {
+  list-style: none;
+  counter-reset: step;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.process-steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 36px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.process-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-steps li strong {
+  color: var(--text);
+  display: block;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 720px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+}
