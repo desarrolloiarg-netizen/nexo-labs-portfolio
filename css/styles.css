@@ -106,3 +106,42 @@ a {
   max-width: 540px;
   margin-bottom: 32px;
 }
+
+#casos h2 {
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.case-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.case-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.case-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.case-card p strong {
+  color: var(--text);
+}
+
+@media (max-width: 720px) {
+  .cases-grid {
+    grid-template-columns: 1fr;
+  }
+}
